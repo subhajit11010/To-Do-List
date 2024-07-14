@@ -3,7 +3,7 @@ const add =  document.getElementById("add");
 const list_container = document.querySelector(".list-con");
 const calender = document.getElementById('calender');
 const heading = document.getElementById('header');
-const audio = new Audio('./src/reminder.mp3');
+const audio = new Audio('./reminder.mp3');
 const fp = flatpickr(calender,{
     enableTime: true,
     dateFormat: "Y-m-d H:i", //date format
