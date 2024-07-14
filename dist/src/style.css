@@ -1,0 +1,251 @@
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+.p{
+    background-color: rgb(65, 63, 63);
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    color: #ffffff;
+    /* border: 1px solid rgb(255, 0, 0); */
+    /* background-color: aqua; */
+    /* justify-content: center; */
+    /* overflow-y: scroll; */
+}
+.sp{
+    margin-top: 1rem;
+    min-height: 90%;
+    width: 50%;
+    padding: 1rem;
+    border: 1px solid rgb(46, 46, 46);
+    border-radius: 2%;
+    background-color: rgb(46, 46, 46);
+    overflow: visible;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5)
+}
+#header{
+    transition: color 1s ease;
+    margin-top: 1rem;
+}
+#input-subcon{
+    width: 80%;
+    height: 70%;
+}
+.input-con{
+    width: 80%;
+    height: 10%;
+    /* padding: 1rem; */
+    /* flex-flow: row; */
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: stretch; */
+    /* border: 1px solid yellow; */
+}
+#bt-con{
+    width: 8%;
+    height: 100%;
+    border-radius: 50%;
+}
+#input{
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+}
+#calender{
+    width: 8%
+}
+#add{
+    /* border-radius: 50%; */
+    width: 100%;
+    height: 100%;
+    background-color: rgb(127, 188, 238);
+    border: 1px solid;
+    border-radius: 10%;
+    border-color: rgb(106, 106, 243);
+    font-size: 2rem;
+    color: white;
+}
+#add:hover{
+    background-color: rgb(54, 151, 241);
+}
+.task{
+    width: 80%;
+    padding: 0.2rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    border: 1px solid rgb(109, 109, 109);
+    align-content: center;
+    text-align: center;
+    margin-right: 0.1rem;
+}
+.del, .done{
+    width: 14%;
+    margin-left: 0.2rem;
+    border: none;
+    border-radius: 10%;
+    font-size: large;
+}
+.del{
+    background-color: rgb(224, 65, 65);
+}
+.del:hover{
+    background-color: red;
+}
+.done{
+    background-color: rgb(120, 238, 120);
+}
+.done:hover{
+    background-color: rgb(72, 236, 72);
+}
+.list-con{
+    position: relative;
+    width: 60%;
+    margin-top: 1rem;
+
+}
+.list{
+    overflow: visible;
+    width: 90%;
+    min-height: 3rem;
+    transition: text-decoration 0.5s ease;
+    /* border: 1px solid black; */
+    position: relative;
+    cursor: default;
+    display: flex;
+    margin: 0.6rem;
+    padding: 0.2rem;
+}
+.date-time{
+    color: black;
+    align-content: center;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: max-content;
+    padding: 0.2rem;
+    border: 1px solid;
+    /* transform: translateX(0); */
+    transition: opacity 1s ease;
+    z-index: 10;
+}
+.list:hover .date-time{
+    opacity: 1;
+}
+@media (min-width: 1300px){
+    .sp{
+        width: 60%;
+    }
+    .input-con{
+        width: 70%;
+    }
+    .del, .done{
+        width: 10%;
+    }
+}
+@media (max-width: 1299px) and (min-width: 1083px){
+    .sp{
+        width: 60%;
+    }
+    .input-con{
+        width: 70%;
+    }
+    #bt-con, #calender{
+        width: 10%;
+    }
+    .del, .done{
+        width: 12%;
+    }
+    .task{
+        width: 78%;
+    }
+}
+@media (max-width: 1083px) and (min-width: 862px){
+    .sp{
+        width: 75%;
+    }
+    .input-con{
+        width: 70%;
+    }
+    #bt-con, #calender{
+        width: 10%;
+    }
+    .del, .done{
+        width: 12%;
+    }
+    .task{
+        width: 78%;
+    }
+}
+@media (max-width: 862px) and (min-width: 574px){
+    .sp{
+        width: 80%;
+    }
+    .input-con{
+        width: 70%;
+    }
+    #bt-con, #calender{
+        width: 12%;
+    }
+    .del, .done{
+        width: 13%;
+    }
+    .task{
+        width: 78%;
+    }
+    .list-con{
+        width: 80%;
+    }
+    .input-con{
+        width: 85%;
+        /* height: 2rem; */
+    }
+}
+@media (max-width: 574px) and (min-width: 360px){
+    .sp{
+        width: 85%;
+    }
+    .input-con{
+        height: 3rem;
+        width: 70%;
+    }
+    #bt-con, #calender{
+        width: 15%;
+        height: 80%;
+    }
+    .del, .done{
+        width: 15%;
+        height: 2rem;
+    }
+    .list{
+        height: 2rem;
+        align-items: center;
+    }
+    .task{
+        width: 90%;
+        min-height: 2rem;
+    }
+    .list-con{
+        width: 95%;
+    }
+    .input-con{
+        width: 85%;
+        /* height: 2rem; */
+    }
+}
